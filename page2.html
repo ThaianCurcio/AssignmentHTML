@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Create your pizza</title>
+</head>
+<h1>Create and order your pizza here</h1>
+
+<body>
+    <main class="quadroMain">
+        <p>
+        <label for="pizza-size">Choose Pizza Size:</label>
+        <select id="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <h2>Choose Toppings:</h2>
+        <div class="topping-options">
+            <div class="topping-option">
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+            </div>
+            <div class="topping-option">
+                <label for="mushrooms">Mushrooms</label>
+                <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+            </div>
+            <div class="topping-option">
+                <label for="onions">Onions</label>
+                <input type="checkbox" id="onions" name="toppings" value="onions">
+            </div>
+            <div class="topping-option">
+                <label for="sausage">Sausage</label>
+                <input type="checkbox" id="sausage" name="toppings" value="sausage">
+            </div>
+            <div class="topping-option">
+                <label for="Garlic">Garlic</label>
+                <input type="checkbox" id="Garlic" name="toppings" value="Garlic">
+            </div>
+            <div class="topping-option">
+                <label for="Chicken">Chicken</label>
+                <input type="checkbox" id="Chicken" name="toppings" value="Chicken">
+            </div>
+            <div class="topping-option">
+                <label for="mushroomsmozzarella">Mozzarella</label>
+                <input type="checkbox" id="mozzarella" name="toppings" value="mozzarella">
+            </div>
+            <div class="topping-option">
+                <label for="Pepperoni with 4 Cheeses">Pepperoni with 4 Cheeses</label>
+                <input type="checkbox" id="Pepperoni with 4 Cheeses" name="toppings" value="Pepperoni with 4 Cheeses">
+            </div>
+            <div class="topping-option">
+                <label for="Canadian bacon">Canadian bacon</label>
+                <input type="checkbox" id="Canadian bacon" name="toppings" value="Canadian bacon">
+            </div>
+            <div class="topping-option">
+                <label for="Tuna">Tuna</label>
+                <input type="checkbox" id="Tuna" name="toppings" value="Tuna">
+            </div>
+       
+
+        
+    </div>
+
+
+    <script>
+        function placeOrder() {
+            const size = document.getElementById("pizza-size").value;
+            const selectedToppings = [...document.querySelectorAll("input[name='toppings']:checked")].map(input => input.value);
+            
+            alert(`You ordered a ${size} pizza with the following toppings: ${selectedToppings.join(', ')}`);
+        }
+    </script>
+    </div>
+    <p> <strong>Input your contact information:</strong>
+        <form action="http://example.com/submit_form" method="post">
+        <label for="username">Complete Name:</label>
+        <input type="text" id="completename" name="completename" required>
+        <br>
+
+        <label for="E-mail Address">E-mail:</label>
+        <input type="E-mail Address" id="E-mail Address" name="E-mail Address" required>
+        <br>
+
+        <label for="Address">Address:</label>
+        <input type="Address" id="Address" name="Address" required>
+        <br>
+
+        <label for="Whatsapp Number">Whatsapp Number:</label>
+        <input type="Whatsapp Number" id="Whatsapp Number" name="Whatsapp Number" required>
+        <br>
+
+     
+    </form></p>
+
+<P><strong>
+    additional add-ons</strong></P>
+    <form>
+        <label>
+            <input type="checkbox" name="Onion" value="Onion">
+            Onion
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="bacon" value="bacon">
+            bacon
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="Eggs" value="Eggs">
+            Eggs
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="Tuna" value="Tuna">
+            Tuna
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="aHam" value="Ham">
+            Ham
+        </label>       
+        <br>
+
+    </form>
+    <button class="order-button" onclick="placeOrder()">Place Order</button>
+   
+      <A class="Button" href="index.html">Home</A>
+
+
+    </main>
+</body>
+</html>
